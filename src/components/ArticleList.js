@@ -38,7 +38,10 @@ const ArticleItem = ({ article }) => {
 	)
 }
 
-const ArticleList = ({ articles }) => {
+const ArticleList = ({ articles, filter }) => {
+	if (filter) {
+		articles = articles.filter(a => a.price.amount < 50)
+	}
 	return (
 		<ul className='article_container'>
 			{articles.map(a => (
@@ -54,6 +57,7 @@ ArticleItem.propTypes = {
 
 ArticleList.propTypes = {
 	articles: PropTypes.array.isRequired,
+	filter: PropTypes.bool.isRequired,
 }
 
 export default ArticleList

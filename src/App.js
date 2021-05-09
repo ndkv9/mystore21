@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { getAllArticles } from './services/articles'
 import ArticleList from './components/ArticleList'
+import Filter from './components/Filter'
 
 const App = () => {
 	const [articles, setArticles] = useState([])
+	const [filter, setFilter] = useState(false)
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -23,15 +25,10 @@ const App = () => {
 		<div id='wrapper'>
 			<header id='header'>
 				<h3>My Store</h3>
-				<div>
-					<input type='checkbox' id='filter' name='filter' />
-					<label className='filter_texts' htmlFor='filter'>
-						CHEAPER THAN 50KR
-					</label>
-				</div>
+				<Filter filter={filter} setFilter={setFilter} />
 			</header>
 			<main id='content'>
-				<ArticleList articles={articles} />
+				<ArticleList articles={articles} filter={filter} />
 			</main>
 			<footer id='footer'>By Erik Vu Nguyen</footer>
 		</div>
