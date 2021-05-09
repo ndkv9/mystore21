@@ -1,17 +1,13 @@
 import React, { useState } from 'react'
-import { useArticles } from './hooks/index'
+import { useArticles, useSelection } from './hooks/index'
 import ArticleList from './components/ArticleList'
 import Filter from './components/Filter'
 import Sort from './components/Sort'
 
 const App = () => {
 	const articles = useArticles()
+	const [selection, handleSelection] = useSelection()
 	const [filter, setFilter] = useState(false)
-	const [selection, setSelection] = useState('')
-
-	const handleSelection = event => {
-		setSelection(event.target.value)
-	}
 
 	return (
 		<div id='wrapper'>

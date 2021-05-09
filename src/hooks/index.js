@@ -21,16 +21,12 @@ export const useArticles = () => {
 	return articles
 }
 
-export const useField = type => {
+export const useSelection = () => {
 	const [value, setValue] = useState('')
 
 	const onChange = event => {
 		setValue(event.target.value)
 	}
 
-	return {
-		type,
-		value,
-		onChange,
-	}
+	return [value, onChange]
 }
