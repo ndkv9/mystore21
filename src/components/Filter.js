@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Filter = ({ filter, setFilter }) => {
 	return (
@@ -15,6 +16,11 @@ const Filter = ({ filter, setFilter }) => {
 			</label>
 		</div>
 	)
+}
+
+Filter.propTypes = {
+	filter: PropTypes.bool.isRequired,
+	setFilter: PropTypes.func.isRequired,
 }
 
 export default Filter
