@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Filter = ({ filter, setFilter }) => {
 	return (
-		<div>
+		<div className='header_items'>
 			<input
 				type='checkbox'
 				id='filter'

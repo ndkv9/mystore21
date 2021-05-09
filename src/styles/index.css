@@ -146,7 +146,8 @@ article:hover {
 .index {
 	color: #343a40;
 	font-size: 0.8rem;
-	margin: 5px 5px;
+	margin-top: 10px;
+	margin-left: 10px;
 }
 
 .header_texts {
@@ -155,9 +156,13 @@ article:hover {
 }
 
 .filter_n_sort {
-	padding: 1rem;
+	padding: 2rem;
 	display: flex;
 	justify-content: space-between;
+}
+
+.header_items {
+	margin: 0.5rem 5px;
 }
 
 @media (min-width: 1280px) {

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Sort = ({ handleSelection }) => {
 	return (
-		<div>
+		<div className='header_items'>
 			<label htmlFor='selections' className='header_texts'>
 				Sort by:{' '}
 			</label>
