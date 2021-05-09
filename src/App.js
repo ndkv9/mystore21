@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { getAllArticles } from './services/articles'
 import ArticleList from './components/ArticleList'
 import Filter from './components/Filter'
+import Sort from './components/Sort'
 
 const App = () => {
 	const [articles, setArticles] = useState([])
@@ -31,22 +32,7 @@ const App = () => {
 			<header id='header'>
 				<h3>My Store</h3>
 				<Filter filter={filter} setFilter={setFilter} />
-				<div>
-					<label htmlFor='selections'>Sort by: </label>
-					<select
-						name='selections'
-						id='selections'
-						onChange={handleSelection}
-					>
-						<option value='most relevance'>Most relevance</option>
-						<option value='cheapest'>Cheapest first</option>
-						<option value='most expensive'>
-							Most expensive first
-						</option>
-						<option value='most rating'>Most rating</option>
-						<option value='lowest rating'>Lowest rating</option>
-					</select>
-				</div>
+				<Sort handleSelection={handleSelection} />
 			</header>
 			<main id='content'>
 				<ArticleList
