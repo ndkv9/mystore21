@@ -45,6 +45,6 @@ jobs:
           WITH_V: true
           INITIAL_VERSION: 0.0.0
           TAG_CONTEXT: repo
-          RELEASE_BRANCHES: master
+          RELEASE_BRANCHES: main
           SOURCE: .
           VERBOSE: true
