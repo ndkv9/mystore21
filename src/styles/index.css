@@ -42,10 +42,9 @@ article:hover {
 }
 
 #header {
-	margin-bottom: 0 !important;
 	width: 100%;
-	font-size: 1.5em;
-	background-color: coral;
+	text-align: center;
+	color: coral;
 }
 
 #content {
@@ -54,8 +53,18 @@ article:hover {
 }
 
 #footer {
+	text-align: center;
+	bottom: 0;
 	width: 100%;
-	background-color: coral;
+	height: 2.7rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-size: 0.9rem;
+}
+
+#footer a {
+	text-decoration: none;
+	color: coral;
 }
 
 .article_container {
@@ -101,7 +110,7 @@ article:hover {
 	font-size: 1.8rem;
 	margin-left: 20px;
 	font-weight: bold;
-	color: #ea4e68;
+	color: coral;
 }
 
 .old_price {
@@ -118,7 +127,7 @@ article:hover {
 	margin-top: 10px;
 	margin-left: 20px;
 	font-weight: bold;
-	color: #ea4e68;
+	color: coral;
 }
 
 .icon {
@@ -128,20 +137,27 @@ article:hover {
 	margin-right: 10px;
 }
 
-.rating {
-	color: #343a40;
-	font-size: 0.8rem;
-	margin: 5px 10px;
+.visual_info {
+	padding: 0.5rem 1.2rem;
+	display: flex;
+	justify-content: space-between;
 }
 
-.delivery {
+.index {
 	color: #343a40;
 	font-size: 0.8rem;
-	margin: 5px 10px;
+	margin: 5px 5px;
 }
 
-.filter_texts {
+.header_texts {
 	font-size: 1.2rem;
+	color: #047177;
+}
+
+.filter_n_sort {
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
 }
 
 @media (min-width: 1280px) {
@@ -163,7 +179,7 @@ article:hover {
 		height: 1.2rem;
 	}
 
-	.filter_texts {
+	.header_texts {
 		font-size: 1.2rem;
 	}
 }
@@ -187,7 +203,7 @@ article:hover {
 		height: 1.2rem;
 	}
 
-	.filter_texts {
+	.header_texts {
 		font-size: 1.2rem;
 	}
 }
@@ -206,8 +222,21 @@ article:hover {
 		height: 1rem;
 	}
 
-	.filter_texts {
+	.header_texts {
 		font-size: 1rem;
+	}
+
+	.filter_n_sort {
+		flex-wrap: wrap;
+	}
+
+	.visual_info {
+		flex-wrap: wrap;
+	}
+
+	#footer {
+		font-size: 0.7rem;
+		height: 2.1rem;
 	}
 }
 
@@ -215,4 +244,9 @@ img {
 	max-width: calc(100% - 10px);
 	max-height: calc(100% - 10px);
 	margin: auto;
+}
+
+select {
+	color: #047177;
+	font-size: 1rem;
 }

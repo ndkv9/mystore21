@@ -21,12 +21,11 @@ const ArticleItem = ({ article }) => {
 					)}
 					<div className='price'>{article.price.formatted}</div>
 					<div className='description'>{article.title}</div>
-
-					<div className='rating'>
+					<div className='index'>
 						<Icon icon={<Star />} size={24} />
 						<span>{article.averageRating}</span>
 					</div>
-					<div className='delivery'>
+					<div className='index'>
 						<Icon icon={<Truck />} size={24} />
 						<span>
 							{article.shipping_time_min}-{article.shipping_time_max}

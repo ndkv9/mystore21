@@ -2,8 +2,10 @@ import React from 'react'
 
 const Sort = ({ handleSelection }) => {
 	return (
-		<>
-			<label htmlFor='selections'>Sort by: </label>
+		<div>
+			<label htmlFor='selections' className='header_texts'>
+				Sort by:{' '}
+			</label>
 			<select
 				name='selections'
 				id='selections'
@@ -15,7 +17,7 @@ const Sort = ({ handleSelection }) => {
 				<option value='most rating'>Most rating</option>
 				<option value='lowest rating'>Lowest rating</option>
 			</select>
-		</>
+		</div>
 	)
 }
 

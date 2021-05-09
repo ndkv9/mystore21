@@ -30,9 +30,11 @@ const App = () => {
 	return (
 		<div id='wrapper'>
 			<header id='header'>
-				<h3>My Store</h3>
-				<Filter filter={filter} setFilter={setFilter} />
-				<Sort handleSelection={handleSelection} />
+				<h3>MY STORE</h3>
+				<div className='filter_n_sort'>
+					<Filter filter={filter} setFilter={setFilter} />
+					<Sort handleSelection={handleSelection} />
+				</div>
 			</header>
 			<main id='content'>
 				<ArticleList
@@ -41,7 +43,10 @@ const App = () => {
 					selection={selection}
 				/>
 			</main>
-			<footer id='footer'>By Erik Vu Nguyen</footer>
+			<footer id='footer'>
+				© {new Date().getFullYear()}, Built with
+				<a href='https://github.com/ndkv9/'> Erik Vu Nguyen </a>
+			</footer>
 		</div>
 	)
 }
