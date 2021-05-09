@@ -1,27 +1,13 @@
-import React, { useState, useEffect } from 'react'
-import { getAllArticles } from './services/articles'
+import React, { useState } from 'react'
+import { useArticles } from './hooks/index'
 import ArticleList from './components/ArticleList'
 import Filter from './components/Filter'
 import Sort from './components/Sort'
 
 const App = () => {
-	const [articles, setArticles] = useState([])
+	const articles = useArticles()
 	const [filter, setFilter] = useState(false)
 	const [selection, setSelection] = useState('')
-
-	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				const articles = await getAllArticles()
-				setArticles(articles)
-			} catch (err) {
-				// eslint-disable-next-line no-console
-				console.log(err.message)
-			}
-		}
-
-		fetchData()
-	}, [])
 
 	const handleSelection = event => {
 		setSelection(event.target.value)
