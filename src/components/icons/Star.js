@@ -2,7 +2,7 @@ import React from 'react'
 import SVG from './SVG'
 
 const Star = () => (
-	<SVG viewBox='0 0 24 14'>
+	<SVG viewBox='0 0 24 15'>
 		<path
 			fill='yellow'
 			fillRule='evenodd'

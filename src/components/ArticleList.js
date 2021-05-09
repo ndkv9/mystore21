@@ -38,13 +38,45 @@ const ArticleItem = ({ article }) => {
 	)
 }
 
-const ArticleList = ({ articles, filter }) => {
+const ArticleList = ({ articles, filter, selection }) => {
 	if (filter) {
 		articles = articles.filter(a => a.price.amount < 50)
 	}
+
+	let handledArticles = articles
+	let ArticlesToHandle = [...articles]
+
+	switch (selection) {
+		case 'cheapest':
+			handledArticles = ArticlesToHandle.sort(
+				(a, b) => a.price.amount - b.price.amount,
+			)
+			break
+		case 'most expensive':
+			handledArticles = ArticlesToHandle.sort(
+				(a, b) => b.price.amount - a.price.amount,
+			)
+			break
+		case 'most rating':
+			handledArticles = ArticlesToHandle.sort(
+				(a, b) => Number(b.averageRating) - Number(a.averageRating),
+			)
+			break
+		case 'lowest rating':
+			handledArticles = ArticlesToHandle.sort(
+				(a, b) => Number(a.averageRating) - Number(b.averageRating),
+			)
+			break
+		case 'most relevance':
+			handledArticles = articles
+			break
+		default:
+			break
+	}
+
 	return (
 		<ul className='article_container'>
-			{articles.map(a => (
+			{handledArticles.map(a => (
 				<ArticleItem key={a.article_id} article={a} />
 			))}
 		</ul>

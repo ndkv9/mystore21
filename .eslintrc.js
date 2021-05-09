@@ -11,16 +11,17 @@ module.exports = {
 		'plugin:react/recommended',
 		'plugin:cypress/recommended',
 	],
+	parser: 'babel-eslint',
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,
 		},
-		ecmaVersion: 12,
 		sourceType: 'module',
+		ecmaVersion: 12,
 	},
 	plugins: ['react', 'jest', 'cypress'],
 	rules: {
-		indent: ['error', 'tab'],
+		indent: 0,
 		'linebreak-style': ['error', 'unix'],
 		quotes: ['error', 'single'],
 		semi: ['error', 'never'],
@@ -31,5 +32,6 @@ module.exports = {
 		'arrow-spacing': ['error', { before: true, after: true }],
 		'no-console': 'error',
 		'no-unused-vars': 'error',
+		'unexpected-token-default': 0,
 	},
 }

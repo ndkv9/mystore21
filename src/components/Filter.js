@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Filter = ({ filter, setFilter }) => {
 	return (
-		<div>
+		<>
 			<input
 				type='checkbox'
 				id='filter'
@@ -14,7 +14,7 @@ const Filter = ({ filter, setFilter }) => {
 			<label className='filter_texts' htmlFor='filter'>
 				CHEAPER THAN 50KR
 			</label>
-		</div>
+		</>
 	)
 }
 
