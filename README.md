@@ -1,61 +1,133 @@
-# Fyndiq-test starter kit
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/ndkv9/mystore21">
+    <img src="https://i.imgur.com/5Y2J5TU.png" alt="Logo" width="80" height="80">
+  </a>
 
-**The purpose** of this repo is to provide you with a pre-configured repo to save time.
+  <h3 align="center">My Store 21</h3>
 
-## Available Scripts
+  <p align="center">
+   Simple App that can retrieve products' information as a grid.
+    <br />
+    <a href="https://github.com/ndkv9/mystore21"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/ndkv9/mystore21/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/ndkv9/mystore21/issues">Request Feature</a>
+  </p>
+</p>
 
-In the project directory, you can run:
+<!-- ABOUT THE PROJECT -->
 
-### `yarn start`
-or
-### `npm start`
+## About The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+[![Product Name Screen Shot][product-screenshot]](https://i.imgur.com/N4IakhW.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Built With
 
-## Test assignment
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [React](https://reactjs.org/)
+- [Product API](https://shop-bff.fyndiq.se/code-assignment/articles)
 
-Our Designer 🧞‍♀️ created a new view for our article list, your job is to build it using React.js. You will have **2-3 hours** to build what you have time for. **You do not need to finish the entire assignment**. For instance, you can skip implementing the ratings and delivery time elements on the article cards.
+<!-- GETTING STARTED -->
 
-Desktop
-![Desktop](desktop.png)
+### Installation
 
-Mobile
-![Mobile](mobile.png)
+1. Clone the repo
 
+```sh
+git clone https://github.com/ndkv9/mystore21
+```
 
-So, your main task is:
-- **Implement cards and display them in the grid**
-- **When the user applies filtering `Cheaper than 50kr`, show only articles with price less than 50kr**
+2. Install NPM packages
 
+```sh
+npm install
+yarn
+```
 
-And if you have time:
-- **Add sorting functionality `by price` and `by rating`, ascending and descending order. "Mest relevanta" (relevance sorting) is the only sorting option provided by the API.**
-- **Sort and filter should work together.**
+3. Implement application on local server
 
+```sh
+npm start
+yarn start
+```
 
-### Important notes:
-- API endpoint that provides dynamic data:
+4. Lint application with ESLint
 
-`https://shop-bff.fyndiq.se/code-assignment/articles`
+```sh
+npm run lint
+yarn run lint
+```
 
-- All assets (like truck, add button icon, star) can be found here -> https://fyndiq.se/halsa-skonhet/ . Feel free to inspect styles in the current implementation.
+5. Test application with Cypress
 
-- On the live site you can find additional functionality (quick add button, different badges, etc). **You don't need to implement it**. Just focus on the design from the screenshots 
+```sh
+npm run test:e2e
+yarn run test:e2e
+```
 
-- Use any font you like. You can download the font from https://fonts.google.com/
+6. Build application code with
 
-- You can use any technology you like for styling.
+```sh
+npm run build
+yarn run build
+```
 
-- Spend **2-3 hours** on the test and build what you have time for. **You do not need to finish the entire assignment**. For instance, you can skip implementing the ratings and delivery time elements on the article cards.
+<!-- USAGE EXAMPLES -->
 
+## Usage
 
-### Consider the following topics for evaluation
-* Code quality
-* Responsiveness
-* Semantics
+1. **Implement cards and display them in the grid**
+
+2. **When the user applies filtering Cheaper than 50kr, show only articles with price less than 50kr**
+
+3. **Add sorting functionality by price and by rating, ascending and descending order. “Mest relevanta” (relevance sorting) is the only sorting option provided by the API**
+
+4. **Sort and filter should work together**
+
+<!-- ROADMAP -->
+
+## Roadmap
+
+See the [open issues](https://github.com/ndkv9/mystore21/issues) for a list of proposed features (and known issues).
+
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+
+## Contact
+
+**vu.nguyen101@gmail.com**
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[license-shield]: https://img.shields.io/github/license/ndkv9/mystore21.svg?style=flat-square
+[license-url]: https://github.com/ndkv9/mystore21/blob/main/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/ndkv9
+[product-screenshot]: https://i.imgur.com/N4IakhW.png
