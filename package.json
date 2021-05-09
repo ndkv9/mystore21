@@ -13,7 +13,8 @@
 	"scripts": {
 		"start": "set PORT=8080 && react-scripts start",
 		"build": "react-scripts build",
-		"test": "react-scripts test",
+		"test:e2e": "cypress run",
+		"test:e2e:open": "cypress open",
 		"lint": "eslint .",
 		"eject": "react-scripts eject"
 	},
